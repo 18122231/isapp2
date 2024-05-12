@@ -19,7 +19,11 @@
         function init(){
             var name = sessionStorage.getItem('username');
             document.getElementById("welcome").innerHTML = 'ようこそ' + name + 'さん';
+
+            var link = document.getElementById("updateLink");
+            link.href = "update.html?name=" + encodeURIComponent(name);
         }
+        
         
         
     </script>
@@ -31,6 +35,7 @@
 
     <p id="welcome">ようこそnameさん</p>
     <hr>
+    <a id="updateLink" >ユーザ情報変更</a>
 
 </body>
 
